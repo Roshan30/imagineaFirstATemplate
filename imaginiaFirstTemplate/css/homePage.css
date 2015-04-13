@@ -1,0 +1,73 @@
+.headerDiv{
+display:inline-block;
+width:100%;
+}
+
+.headerDiv h1{
+	color:red;
+}
+
+.buttonsClass{
+width:10%;
+margin-right: 2%;
+margin-top:5%;
+border:none;
+background:none;
+}
+.homePageDIvClass{
+		margin-left:32px;
+	}
+.containerClass ul
+ {
+ list-style: none; 
+}
+.containerClass .buttons {
+ margin-bottom: 20px; 
+}
+
+.containerClass .list li { 
+width: 100%;
+ border-bottom: 1px dotted #CCC;
+margin-bottom: 10px;
+ padding-bottom: 10px;
+background-color: rgb(247, 247, 247);
+  border-radius: 4%;
+cursor:pointer;
+ }
+.containerClass .list li a{
+	display:inline-block;
+	width:100%;
+}
+.containerClass .grid li img{
+height:200px;
+width:257px;
+}
+.containerClass .grid li { 
+float: left;
+ width: 33%;
+ height: 240px;
+border-bottom: 1px dotted #CCC;
+ padding: 20px;
+cursor:pointer;
+
+ }
+.containerClass .grid li .listViewText{
+display:none;
+}
+.containerClass .list li img{
+	float:left;
+	height:77px;
+  margin-top: 1%;
+}
+.containerClass .list li .listViewText{
+display:inline-block;
+float:left;
+width:80%;
+padding-top:0%;
+margin-left:2%;
+text-align:center;
+color:#643A3A;
+}
+.containerClass .list li .listViewText b{
+color:#576969;
+}

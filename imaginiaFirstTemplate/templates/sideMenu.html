@@ -1,0 +1,13 @@
+<!-- Sidebar -->
+	<div id="sidebar-scroller">
+    <div id="sidebar-wrapper" ng-controller="sideMenuCtrl">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand" ng-repeat="paths in paths">
+		<a href="{{paths.url}}">
+			<img class="img-responsive imgIconMenuCLass" src="{{paths.icon}}"/>
+		</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="css/sideMenu.css"></link>

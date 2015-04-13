@@ -1,0 +1,37 @@
+
+<div class="eventDetailClass" ng-controller="eventDetailCtrl">
+	<div class="alignCenterClass">
+		<img src="{{imageSrc}}" id="{{imageId}}"/>
+	</div>
+	<p class="alignCenterClass">
+		<b>Title </b>:- {{imageTitle}}
+	</p>
+	<p class="alignCenterClass">
+		<b>Venue </b>:- {{imageVenue}}
+	</p>
+	<p class="alignCenterClass">
+		<b>Date And Time </b>:- {{imageDnT}}
+	</p>
+	<p class="alignCenterClass">
+		<b>Description </b>:-{{imageDesc}}
+	</p>
+
+</div>
+
+<style>
+	.eventDetailClass{
+			  margin-left: auto;
+  			margin-right: auto;
+  			width: 991px;
+			  margin-top: 5%;
+		}
+	.alignCenterClass{
+			margin-top:1%;
+			text-align:center;
+			color:#2B1B20;
+		}
+	.alignCenterClass b{
+			color:black;		
+		}
+
+</style>

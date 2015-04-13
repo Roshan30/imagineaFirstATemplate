@@ -1,0 +1,226 @@
+@media (min-width: 768px) and (max-width: 991px) {
+h1{
+font-size:31px !important;
+}
+.containerClass .list li .listViewText{
+width:77% !important;
+}
+.headerDiv{
+margin-top:3%;
+}
+.headerDiv div.pull-right{
+width:31%;
+margin-top:11px;
+}
+.headerDiv div.pull-left{
+  width: 60%;
+  margin-left: 5%;
+}
+.buttonsClass{
+width:18% !important;
+}
+.eventDetailClass{
+width:572px !important;
+margin-left:14% !important;
+}
+.containerClass .grid li{
+width:50% !important;
+}
+
+.containerClass .list li img{
+  margin-top: 4% !important;
+  width: 106px;
+}
+
+.sidebar-nav > .sidebar-brand{
+padding-top:36% !important;
+}
+#sidebar-wrapper{
+width:62px	 !important;
+}
+
+  }
+
+
+
+
+@media (max-width: 584px){
+.navbar-header{
+  float: left;
+  display: inline-block;
+}
+#bs-example-navbar-collapse-1{
+  display: inline-block;
+  float: left;
+  width: 85%;
+  margin-left: 28px;
+  padding-left:0px;
+}
+#menu1 span{
+display:none;
+}
+#bs-example-navbar-collapse-1 form{
+float:left;
+margin:0px !important;
+display: inline-block;
+width: 84%;
+}
+.searchBoxDivClass{
+display: inline-block;
+  width: 100%; 
+}
+.searchBoxClass{
+  float: left;
+  padding: 0px !important;
+    width: 88%;
+}
+#bs-example-navbar-collapse-1 .pull-right{
+  float: left !important;
+}
+.searchIconButton{
+  padding:0px;
+}
+.menuOptionsUser{
+  right:0;
+}
+.buttonsClass{
+width:23% !important;
+}
+.headerDiv{
+margin-top: 34px;
+}
+h1{
+  font-size: 25px;
+}
+.headerDiv div.pull-right{
+  width: 40%!important;
+  margin-top: 7px;
+}
+.headerDiv div.pull-left{
+
+  margin-left: 12px;
+}
+.containerClass .list li .listViewText{
+  width: 60% !important;
+}
+.containerClass .list li img{
+  width:110px;
+}
+.containerClass .list li .listViewText .imageDesc,.containerClass .list li .listViewText .descCaption{
+
+  display: none;
+}
+.containerClass .grid li{
+   width: 100% !important;
+  text-align: center;
+}
+.eventDetailClass{
+
+  width: 86% !important;
+  margin-left: 10% !important;
+    margin-top: 15% !important;
+}
+
+#sidebar-wrapper,.eIconImageClass{
+width:52px   !important;
+}
+.sidebar-nav{
+
+  top:40px !important;
+}
+.sidebar-nav > .sidebar-brand{
+  padding-top: 40% !important; 
+}
+
+}
+  
+
+
+
+ @media (min-width: 585px) and (max-width: 768px){
+.navbar-header{
+  float: left;
+  display: inline-block;
+}
+#bs-example-navbar-collapse-1{
+  display: inline-block;
+  float: left;
+  width: 90%;
+  margin-left: 28px;
+  padding-left:0px;
+}
+
+#bs-example-navbar-collapse-1 form{
+float:left;
+margin:0px !important;
+display: inline-block;
+width: 55%;
+}
+.searchBoxDivClass{
+display: inline-block;
+  width: 100%; 
+}
+.searchBoxClass{
+  float: left;
+  padding: 0px !important;
+    width: 88%;
+}
+
+.searchIconButton{
+  padding:0px;
+}
+.menuOptionsUser{
+  right:0;
+}
+
+
+
+.buttonsClass{
+width:16% !important;
+}
+.headerDiv{
+margin-top: 34px;
+}
+h1{
+  font-size: 25px;
+}
+.headerDiv div.pull-right{
+  width: 44%!important;
+  margin-top: 7px;
+}
+.headerDiv div.pull-left{
+ margin-left: 32px;
+}
+.containerClass .list li .listViewText{
+  width: 60% !important;
+}
+.containerClass .list li img{
+  width:110px;
+}
+.containerClass .list li .listViewText .imageDesc,.containerClass .list li .listViewText .descCaption{
+
+  display: none;
+}
+.containerClass .grid li{
+  width: 100% !important;
+  text-align: center;
+}
+.eventDetailClass{
+
+  width: 86% !important;
+  margin-left: 10% !important;
+    margin-top: 15% !important;
+}
+
+#sidebar-wrapper,.eIconImageClass{
+width:55px   !important;
+}
+.sidebar-nav{
+
+  top:40px !important;
+}
+.sidebar-nav > .sidebar-brand{
+  padding-top: 40% !important; 
+}
+
+ } 

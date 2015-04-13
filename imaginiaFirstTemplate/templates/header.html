@@ -1,0 +1,40 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="headerCtrl">
+  <div class="container-fluid marginRight0">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="eIconAnchorTagClass navbar-brand" href="/home">
+		<img src="{{paths.e_icon}}" class="img-responsive eIconImageClass" alt="e_icon"/>
+	</a>
+    </div>
+ 
+    <div class="collapse navbar-collapse marginRight0" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group searchBoxDivClass">
+          <input type="text" class="searchBoxClass form-control" placeholder="Search"/>
+		<button type="submit" class="searchIconButton btn btn-default"><span class="glyphicon glyphicon-search"></span>
+</button>
+        </div>
+        
+      </form>
+      <div class="pull-right">
+		 <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+	<img src="css/images/user_icon.png"/>
+	<span class="userName">Aron Sananes</span>
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu menuOptionsUser" role="menu" aria-labelledby="menu1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Profile</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sign Out</a></li>
+        </ul>
+      </div>
+	
+
+	</div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<link rel="stylesheet" type="text/css" href="css/header.css"></link>
+
