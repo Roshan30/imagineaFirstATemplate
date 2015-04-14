@@ -1,95 +1,99 @@
-[{
-	"epaths":{
-		"e_icon":"css/images/e_icon.png"
-		},
-	"paths":[
-			{
-				"icon":"css/images/home_icon.png",
-				"url":"#homePage"
-			},
-			{
-				"icon":"css/images/book_icon.png",
-				"url":"#"
-			},
-			{
-				"icon":"css/images/calender_icon.png",
-				"url":"#"				
-			},
-			{
-				"icon":"css/images/contact_icon.png",
-				"url":"#"
-			},
-			{
-				"icon":"css/images/message_icon.png",
-				"url":"#"
-			},
-			{
-				"icon":"css/images/wheel_icon.png",
-				"url":"#"
-			},
-			{
-				"icon":"css/images/graph_icon.png",
-				"url":"#"
-			},
-			{
-				"icon":"css/images/setting_icon.png",
-				"url":"#"				
-			}],
-		"imagePaths":[
-			{
-				"id":"title1",
-				"icon":"css/images/img1.png",
-				"title":"Image title 1",
-				"venue":"venue is still to be decided",
-				"dateAndTime":"5th April 2015 9:30am",
-				"desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
-			},
-			{
-				"id":"title2",
-				"icon":"css/images/img3.png",
-				"title":"Image title 2",
-				"venue":"venue is still to be decided",
-				"dateAndTime":"5th April 2015 10:30am",
-				"desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
-			},
-			{
-				"id":"title3",
-				"icon":"css/images/img2.png",
-				"title":"Image title 3",
-				"venue":"venue is still to be decided",
-				"dateAndTime":"5th April 2015 11:30am",
-				"desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."				
-			},
-			{
-				"id":"title4",
-				"icon":"css/images/img4.png",
-				"title":"Image title 4",
-				"venue":"venue is still to be decided",
-				"dateAndTime":"5th April 2015 1:30am",
-				"desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
-			},
-			{
-				"id":"title5",
-				"icon":"css/images/img5.png",
-				"title":"Image title 5",
-				"venue":"venue is still to be decided",
-				"dateAndTime":"5th April 2015 2:30am",
-				"desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
-			},
-			{
-				"id":"title6",
-				"icon":"css/images/img6.png",
-				"title":"Image title 6",
-				"venue":"venue is still to be decided",
-				"dateAndTime":"5th April 2015 3:30am",
-				"desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
-			},
-			{
-				"id":"title7",
-				"icon":"css/images/img7.png",
-				"title":"Image title 7",
-				"venue":"venue is still to be decided",
-				"dateAndTime":"5th April 2015 4:30am",
-				"desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
-			}]
-}]	
+[  
+   {  
+      "epaths":{  
+         "e_icon":"css/images/e_icon.png"
+      },
+      "paths":[  
+         {  
+            "icon":"css/images/home_icon.png",
+            "url":"#homePage"
+         },
+         {  
+            "icon":"css/images/book_icon.png",
+            "url":"#"
+         },
+         {  
+            "icon":"css/images/calender_icon.png",
+            "url":"#"
+         },
+         {  
+            "icon":"css/images/contact_icon.png",
+            "url":"#"
+         },
+         {  
+            "icon":"css/images/message_icon.png",
+            "url":"#"
+         },
+         {  
+            "icon":"css/images/wheel_icon.png",
+            "url":"#"
+         },
+         {  
+            "icon":"css/images/graph_icon.png",
+            "url":"#"
+         },
+         {  
+            "icon":"css/images/setting_icon.png",
+            "url":"#"
+         }
+      ],
+      "imagePaths":[  
+         {  
+            "id":"title1",
+            "icon":"css/images/img1.png",
+            "title":"Image title 1",
+            "venue":"venue is still to be decided",
+            "dateAndTime":"5th April 2015 9:30am",
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
+         },
+         {  
+            "id":"title2",
+            "icon":"css/images/img3.png",
+            "title":"Image title 2",
+            "venue":"venue is still to be decided",
+            "dateAndTime":"5th April 2015 10:30am",
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
+         },
+         {  
+            "id":"title3",
+            "icon":"css/images/img2.png",
+            "title":"Image title 3",
+            "venue":"venue is still to be decided",
+            "dateAndTime":"5th April 2015 11:30am",
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
+         },
+         {  
+            "id":"title4",
+            "icon":"css/images/img4.png",
+            "title":"Image title 4",
+            "venue":"venue is still to be decided",
+            "dateAndTime":"5th April 2015 1:30am",
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
+         },
+         {  
+            "id":"title5",
+            "icon":"css/images/img5.png",
+            "title":"Image title 5",
+            "venue":"venue is still to be decided",
+            "dateAndTime":"5th April 2015 2:30am",
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
+         },
+         {  
+            "id":"title6",
+            "icon":"css/images/img6.png",
+            "title":"Image title 6",
+            "venue":"venue is still to be decided",
+            "dateAndTime":"5th April 2015 3:30am",
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
+         },
+         {  
+            "id":"title7",
+            "icon":"css/images/img7.png",
+            "title":"Image title 7",
+            "venue":"venue is still to be decided",
+            "dateAndTime":"5th April 2015 4:30am",
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat."
+         }
+      ]
+   }
+]

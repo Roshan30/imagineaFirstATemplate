@@ -1,36 +1,41 @@
 <!doctype html>
 <html lang="en" ng-app="sampleApp">
-	<head>
-		<title>AngularJS Imaginea First app</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/responsive.css">
-		
-	</head>
-	<body ng-controller="RouteController">
+
+<head>
+	<title>AngularJS Imaginea First app</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body ng-controller="RouteController">
 	<div class="container headerMainDIv" ng-include src="'templates/header.html'">
 	</div>
 	<div class="container SideBarMainDIv" ng-include src="'templates/sideMenu.html'">
 	</div>
 	<div ng-view class="container"></div>
-<style>
-body{
-background-color:#EAEBEB;
-}
-.SideBarMainDIv{
-display: inline-block;
-  margin-top: 4%;
-}
-</style>
-
+	<style>
+		body {
+			background-color: #EAEBEB;
+		}
 		
+		.SideBarMainDIv {
+			display: inline-block;
+			margin-top: 4%;
+		}
 
-		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="js/angular.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<script src="js/bootstrap-popover.js"></script>		
-<script src="js/homePage.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
+	</style>
+
+
+
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/homePage.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+
 </html>

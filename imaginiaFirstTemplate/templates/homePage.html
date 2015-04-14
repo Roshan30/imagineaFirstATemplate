@@ -1,76 +1,73 @@
 <script>
-$(document).ready(function(){
-$(document).on('click', 'ul li.imageLiCLass', function() { 
-     angular.element(document.querySelector('[ng-controller="RouteController"]')).scope().passEventDetails($(this).find('img').attr('id'),$(this).find('.imageTitle').text(),$(this).find('img').attr('src'),$(this).find('.imageVenue').text(),$(this).find('.imageDnT').text(),$(this).find('.imageDesc').text());
+    $(document).ready(function() {
+        $(document).on('click', 'ul li.imageLiCLass', function() {
+            angular.element(document.querySelector('[ng-controller="RouteController"]')).scope().passEventDetails($(this).find('img').attr('id'), $(this).find('.imageTitle').text(), $(this).find('img').attr('src'), $(this).find('.imageVenue').text(), $(this).find('.imageDnT').text(), $(this).find('.imageDesc').text());
 
-	var path='#/eventDetail/'+$(this).find('img').attr('id');
-$(this).find('a').attr('href',path);
-$(this).find('a').trigger('click');
-});
+            var path = '#/eventDetail/' + $(this).find('img').attr('id');
+            $(this).find('a').attr('href', path);
+            $(this).find('a').trigger('click');
+        });
 
-});
+    });
 </script>
 <div class="homePageDIvClass" ng-controller="RouteController">
 
 
-<div class="containerClass">
-	<div class="headerDiv">
-		<div class="pull-left">
-			<h1>Upcoming Events</h1>
-		</div>
-    		<div class="pull-right">
-			<button class="buttonsClass pull-right">
-				<img class="img-responsive" src="css/images/calenderImage.png"/>
-			</button>
-			 <button id="listImage" class="buttonsClass list pull-right" ng-click="viewPageFunction('list')">
-				<img class="img-responsive" src="css/images/listImage.png"/>
-			</button>
-        		<button id="gridImage" class="buttonsClass grid pull-right" ng-click="viewPageFunction('grid')">
-				<img class="img-responsive" src="css/images/gridImage.png"/>	
-			</button>
-       			
-			
-    		</div>
-    	</div>
-    <ul class="list">
-        <li class="imageLiCLass" ng-repeat="paths in imagePaths">
-		<a class="media" >
-			<img id="{{paths.id}}" src="{{paths.icon}}"/>
-			<span class="listViewText"><b>Title</b>:-<span class="imageTitle"> {{paths.title}}</span>
-			</span>
-			<span class="listViewText"><b>Venue</b>:-<span class="imageVenue">{{paths.venue}}</span>
-			</span>
-			<span class="listViewText"><b>Date And Time</b>:-<span class="imageDnT">{{paths.dateAndTime}}</span>
-			</span>
-			<span class="listViewText"><b class="descCaption">Description:-</b><span class="imageDesc">{{paths.desc}}</span>
-			</span>
-			<div class="media__body">
-    <h4>{{paths.title}}</h4>
-    <p>{{paths.venue}}</p>
-	<p>{{paths.dateAndTime}}</p>
-  </div>
-</div>
+    <div class="containerClass">
+        <div class="headerDiv">
+            <div class="pull-left">
+                <h1>Upcoming Events</h1>
+            </div>
+            <div class="pull-right">
+                <button class="buttonsClass pull-right">
+                    <img class="img-responsive" src="css/images/calenderImage.png" />
+                </button>
+                <button id="listImage" class="buttonsClass list pull-right" ng-click="viewPageFunction('list')">
+                    <img class="img-responsive" src="css/images/listImage.png" />
+                </button>
+                <button id="gridImage" class="buttonsClass grid pull-right" ng-click="viewPageFunction('grid')">
+                    <img class="img-responsive" src="css/images/gridImage.png" />
+                </button>
 
-		</a>
-	</li>
-       
+
+            </div>
+        </div>
+        <ul class="list">
+            <li class="imageLiCLass" ng-repeat="paths in imagePaths">
+                <a class="media">
+                    <img id="{{paths.id}}" src="{{paths.icon}}" />
+                    <span class="listViewText"><b>Title</b>:-<span class="imageTitle"> {{paths.title}}</span>
+                    </span>
+                    <span class="listViewText"><b>Venue</b>:-<span class="imageVenue">{{paths.venue}}</span>
+                    </span>
+                    <span class="listViewText"><b>Date And Time</b>:-<span class="imageDnT">{{paths.dateAndTime}}</span>
+                    </span>
+                    <span class="listViewText"><b class="descCaption">Description:-</b><span class="imageDesc">{{paths.desc}}</span>
+                    </span>
+                    <div class="mediaBody">
+                        <h4>{{paths.title}}</h4>
+                        <p>{{paths.venue}}</p>
+                        <p>{{paths.dateAndTime}}</p>
+                    </div>
+    </div>
+
+    </a>
+    </li>
+
     </ul>
-</div>   
+</div>
 </div>
 
 
 
 
-<link rel="stylesheet" href="css/overlay.css"/>
-		
+<link rel="stylesheet" href="css/overlay.css" />
 
-<link rel="stylesheet" href="css/homePage.css"/>
+
+<link rel="stylesheet" href="css/homePage.css" />
 <style>
-
 </style>
 
 
 <style>
-
 </style>
-

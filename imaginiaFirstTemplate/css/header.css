@@ -1,47 +1,51 @@
-.eIconImageClass{
-width:62px;
-height:52px;
+.eIconImageClass {
+    width: 62px;
+    height: 52px;
 }
-.navbar-inverse{
-margin-bottom:0px;
+.navbar-inverse {
+    margin-bottom: 0px;
 }
-.marginRight0{
-padding-right:0px;
+.marginRight0 {
+    padding-right: 0px;
 }
-.userName{
-padding:0px 30px 0px 20px;
-display:inline-block;
+.userName {
+    padding: 0px 30px 0px 20px;
+    display: inline - block;
 }
-#menu1{
-background-color:#000000;
-padding:10px;
-color: rgba(153, 153, 153, 1);
+#menu1 {
+    background-color: #000000;
+    padding: 10px;
+    color: rgba(153, 153, 153, 1);
 }
-.eIconAnchorTagClass{
-padding:0px;
+.eIconAnchorTagClass {
+    padding: 0px;
 }
-.searchBoxClass,.searchBoxClass:focus{
-background-color:#505050;
-border:0px;
-box-shadow:none;
-color:#FFFFFF;
+.searchBoxClass,
+.searchBoxClass:focus {
+    background-color: #505050;
+    border: 0px;
+    box-shadow: none;
+    color: #FFFFFF;
 }
-.navbar-inverse{
-background-color:#505050;
+.navbar-inverse {
+    background-color: #505050;
 }
-.searchBoxDivClass{
-border-bottom:1px solid #787878;
+.searchBoxDivClass {
+    border-bottom: 1px solid #787878;
 }
-.searchIconButton,.searchIconButton:hover{
-background-color:#505050;
-color: rgba(6, 6, 6, 1);
-border:none;
+.searchIconButton,
+.searchIconButton:hover {
+    background-color: #505050;
+    color: rgba(6, 6, 6, 1);
+    border: none;
 }
-.menuOptionsUser,.menuOptionsUser li a:hover{
-width:100%;
-background-color:#000000;
-color: rgba(153, 153, 153, 1);
+.menuOptionsUser,
+.menuOptionsUser li a:hover {
+    width: 100%;
+    background-color:#000000;
+    color: rgba(153, 153, 153, 1);
 }
-.menuOptionsUser li a,.menuOptionsUser li a:hover{
-color: rgba(153, 153, 153, 1);
+.menuOptionsUser li a,
+.menuOptionsUser li a:hover {
+    color: rgba(153, 153, 153, 1);
 }
