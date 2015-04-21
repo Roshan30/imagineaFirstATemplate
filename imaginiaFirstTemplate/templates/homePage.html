@@ -1,15 +1,4 @@
-<script>
-    $(document).ready(function() {
-        $(document).on('click', 'ul li.imageLiCLass', function() {
-            angular.element(document.querySelector('[ng-controller="RouteController"]')).scope().passEventDetails($(this).find('img').attr('id'), $(this).find('.imageTitle').text(), $(this).find('img').attr('src'), $(this).find('.imageVenue').text(), $(this).find('.imageDnT').text(), $(this).find('.imageDesc').text());
 
-            var path = '#/eventDetail/' + $(this).find('img').attr('id');
-            $(this).find('a').attr('href', path);
-            $(this).find('a').trigger('click');
-        });
-
-    });
-</script>
 <div class="homePageDIvClass" ng-controller="RouteController">
 
 
@@ -34,7 +23,7 @@
         </div>
         <ul class="list">
             <li class="imageLiCLass" ng-repeat="paths in imagePaths">
-                <a class="media">
+                <a class="media" ng-click="navigateToDetails(paths)">
                     <img id="{{paths.id}}" src="{{paths.icon}}" />
                     <span class="listViewText"><b>Title</b>:-<span class="imageTitle"> {{paths.title}}</span>
                     </span>

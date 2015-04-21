@@ -15,59 +15,7 @@ var module = angular.module("sampleApp", ['ngRoute']);
  		});
  	}
  ]);
-
-
-
-
- module.service('$commonService', function() {
- 	var imageId;
- 	var imageTitle;
- 	var imageSrc;
- 	var imageVenue;
- 	var imageDnT;
- 	var imageDesc;
- 	return {
- 		getImageId: function() {
- 			return imageId;
- 		},
- 		setImageId: function(value) {
- 			imageId = value;
- 		},
- 		getImageTitle: function() {
- 			return imageTitle;
- 		},
- 		setImageTitle: function(value) {
- 			imageTitle = value;
- 		},
- 		getImageSrc: function() {
- 			return imageSrc;
- 		},
- 		setImageSrc: function(value) {
- 			imageSrc = value;
- 		},
- 		getImageVenue: function() {
- 			return imageVenue;
- 		},
- 		setImageVenue: function(value) {
- 			imageVenue = value;
- 		},
- 		getImageDnT: function() {
- 			return imageDnT;
- 		},
- 		setImageDnT: function(value) {
- 			imageDnT = value;
- 		},
- 		getImageDesc: function() {
- 			return imageDesc;
- 		},
- 		setImageDesc: function(value) {
- 			imageDesc = value;
- 		}
- 	};
- });
-
-
- module.controller("RouteController", function($scope, $http, $commonService) {
+ module.controller("RouteController", function($scope, $http,$location) {
  	$http.get("data/path.json").success(function(response) {
  		$scope.imagePaths = response[0].imagePaths;
  	});
@@ -78,15 +26,12 @@ var module = angular.module("sampleApp", ['ngRoute']);
  			$('.containerClass ul').removeClass('grid').addClass('list');
  		}
  	}
- 	$scope.passEventDetails = function(imageId, imageTitle, imageSrc, imageVenue, imageDnT, imageDesc) {
- 		//alert('pass '+imageId+imageTitle+imageSrc+imageVenue+imageDnT+imageDesc);
- 		$commonService.setImageId(imageId);
- 		$commonService.setImageTitle(imageTitle);
- 		$commonService.setImageSrc(imageSrc);
- 		$commonService.setImageVenue(imageVenue);
- 		$commonService.setImageDnT(imageDnT);
- 		$commonService.setImageDesc(imageDesc);
+ 
+
+ 	$scope.navigateToDetails = function (paths) {
+ 		$location.url('eventDetail/' + paths.id);
  	}
+
  });
 
  module.controller("headerCtrl", function($scope, $http) {
@@ -104,14 +49,19 @@ var module = angular.module("sampleApp", ['ngRoute']);
  		});
 
  });
- module.controller("eventDetailCtrl", function($scope, $commonService, $routeParams) {
+ module.controller("eventDetailCtrl", function($scope,$http, $routeParams) {
 
- 	$scope.imageId = $commonService.getImageId();
- 	$scope.imageTitle = $commonService.getImageTitle();
- 	$scope.imageSrc = $commonService.getImageSrc();
- 	$scope.imageVenue = $commonService.getImageVenue();
- 	$scope.imageDnT = $commonService.getImageDnT();
- 	$scope.imageDesc = $commonService.getImageDesc();
+ 	
+ 		$http.get("data/path.json").success(function(response) {
+ 		$.each(response[0].imagePaths, function (key, data) { 	
+ 		//console.log(data.id+' '+$routeParams.title)				
+ 					if(data.id==$routeParams.title){
+ 							
+ 						$scope.selectedObjet=data;
+ 						console.log($scope.selectedObjet);
+ 					}
+ 			});
+ 	});
 
  });
 
