@@ -98,11 +98,18 @@ var module = angular.module("sampleApp", ['ngRoute']);
 		$scope.saveEvent = function (){
 			$scope.genratedIdNew = $scope.randomString();
 			$scope.models.event.id = $scope.genratedIdNew;
-				
-						$http.get("data/imagePath.json").success(function(response) {
- 						response.push($scope.models.event);
- 						console.log(response);
-    		});
+				var params = JSON.stringify($scope.models.event);
+						$.ajax({
+    type: 'POST',
+    data: params,
+    url: 'saveDataToJson.php',
+    success: function(data){
+        alert('success');
+    },
+    error: function(){
+      alert('error')
+    }
+});
 
  					 }
     		
