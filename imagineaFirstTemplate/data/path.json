@@ -1,0 +1,42 @@
+[  
+   {  
+      "epaths":{  
+         "e_icon":"css/images/e_icon.png"
+      },
+      "paths":[  
+         {  
+            "class":"fa fa-home fa-2x",
+            "url":"#homePage"
+         },
+         {  
+            "class":"fa fa-plus fa-2x",
+            "url":"#addEvent"
+         },
+         {  
+            "class":"fa fa-calendar fa-2x",
+            "url":"#"
+         },
+         {  
+            "class":"fa fa-user fa-2x",
+            "url":"#"
+         },
+         {  
+            "class":"fa fa-comment fa-2x",
+            "url":"#"
+         },
+         {  
+            "class":"fa fa-building fa-2x",
+            "url":"#"
+         },
+         {  
+            "class":"fa fa-bar-chart fa-2x",
+            "url":"#"
+         },
+         {  
+            "class":"fa fa-cogs fa-2x",
+            "url":"#"
+         }
+      ]
+      
+   }
+]
