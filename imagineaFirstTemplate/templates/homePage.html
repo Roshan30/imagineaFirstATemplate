@@ -1,5 +1,5 @@
 
-<div class="homePageDIvClass" ng-controller="RouteController">
+<div class="homePageDIvClass">
 
 
     <div class="containerClass">
@@ -7,22 +7,18 @@
             <div class="pull-left">
                 <h1>Upcoming Events</h1>
             </div>
-            <div class="pull-right">
-                <button class="buttonsClass pull-right">
-                    <img class="img-responsive" src="css/images/calenderImage.png" />
-                </button>
-                <button id="listImage" class="buttonsClass list pull-right" ng-click="viewPageFunction('list')">
-                    <img class="img-responsive" src="css/images/listImage.png" />
-                </button>
-                <button id="gridImage" class="buttonsClass grid pull-right" ng-click="viewPageFunction('grid')">
-                    <img class="img-responsive" src="css/images/gridImage.png" />
-                </button>
-
+            <div class="pull-right sideIconsDiv">
+               
+                      <i class="sideIcons fa fa-table fa-2x" ng-click="viewPageFunction('grid')"></i>
+  
+                     <i class="sideIcons fa fa-list fa-2x" ng-click="viewPageFunction('list')"></i>
+ 
+                     <i class="sideIcons fa fa-calendar fa-2x"></i>
 
             </div>
         </div>
         <ul class="list">
-            <li class="imageLiCLass" ng-repeat="paths in imagePaths">
+            <li class="imageLiCLass" ng-repeat="paths in imagePaths |  filter:searchFieldValGlobal">
                 <a class="media" ng-click="navigateToDetails(paths)">
                     <img id="{{paths.id}}" src="{{paths.icon}}" />
                     <span class="listViewText"><b>Title</b>:-<span class="imageTitle"> {{paths.title}}</span>
@@ -38,12 +34,17 @@
                         <p>{{paths.venue}}</p>
                         <p>{{paths.dateAndTime}}</p>
                     </div>
+
     </div>
 
     </a>
     </li>
 
     </ul>
+
+
+
+
 </div>
 </div>
 
