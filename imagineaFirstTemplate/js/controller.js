@@ -1,5 +1,5 @@
 angular.module("sampleApp")
-.controller("RouteController", function($scope, $location,commonService,$commonService) {
+.controller("RouteController", function($scope, $location,commonService,$commonService,$window) {
  
 
     if(flag.firstTimeEvents){
@@ -25,12 +25,10 @@ angular.module("sampleApp")
  	$scope.navigateToDetails = function (paths) {
  		$location.url('eventDetail/' + paths.id);
  	}
-    commonService.getSearchData().then(function(data){
-        $scope.searchFieldValGlobal = data;
-   });
-   console.log($scope.searchFieldValGlobal);
- $scope.$watch('searchFieldValGlobal', function (newVal, oldVal) {
-  
+ $scope.$watch( function () {
+        return $window.searchFieldValGlobal; 
+    }, function (newVal, oldVal) {
+  $scope.searchFieldValGlobal = newVal;
  });
 
  })
@@ -41,10 +39,7 @@ angular.module("sampleApp")
       });
       $scope.searchFieldVal={}
       $scope.updateSearch = function(fieldVal){
-        //console.log(fieldVal);
-       $commonService.setSearchData($scope.searchFieldVal.newVal);
        searchFieldValGlobal = $scope.searchFieldVal.newVal;
-       //console.log(searchFieldValGlobal);
       }
             
  })
@@ -52,7 +47,6 @@ angular.module("sampleApp")
 .controller("sideMenuCtrl", function($scope, commonService) {
  			commonService.getPath().then(function(response){
           $scope.paths = response;
-
       });
 
  })
