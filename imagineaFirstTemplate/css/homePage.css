@@ -2,7 +2,7 @@
     display: inline-block;
     width: 100%;
 }
-.headerDiv h1 {
+.headerDiv h2 {
     color: red;
 }
 .sideIconsDiv{
@@ -35,16 +35,19 @@
     width: 100%;
 }
 .containerClass .grid li img {
-    height: 200px;
-    width: 257px;
+    height: 100%;
+    width: 100%;
 }
 .containerClass .grid li {
     float: left;
     width: 33%;
     height: 240px;
     border-bottom: 1px dotted #CCC;
-    padding: 20px;
+    padding: 5px;
     cursor: pointer;
+    border: 1px solid #ccc;
+  margin-right: 3px;
+  margin-bottom: 8px;
 }
 .containerClass .grid li .listViewText {
     display: none;

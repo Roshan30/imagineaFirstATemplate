@@ -65,7 +65,7 @@ angular.module("sampleApp")
 .controller("addEventCtrl", function($scope,commonService,$location) {
  		$scope.models={
  			event:{
- 				icon:'css/images/img5.png'
+ 				icon:'css/images/imgNew.svg'
  			}
  		}
 
