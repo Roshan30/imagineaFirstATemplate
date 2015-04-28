@@ -63,8 +63,9 @@
     width: 80%;
     padding-top: 0%;
     margin-left: 2%;
-    text-align: center;
+    text-align: center;     
     color: #643A3A;
+    font-family: "Montserrat", sans-serif;
 }
 .containerClass .list li .listViewText b {
     color: #576969;
