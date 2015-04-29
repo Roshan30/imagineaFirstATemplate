@@ -1,10 +1,13 @@
 angular.module("sampleApp")
-.controller("RouteController", function($scope, $location,commonService,$commonService,$window) {
+.controller("RouteController", function($scope, $location,commonService,$commonService,$window,$filter) {
  
+    $scope.models = {
 
+    }
     if(flag.firstTimeEvents){
         commonService.getEvents().then(function(events){
       $scope.imagePaths = events;
+      $scope.models.events = events;
       $commonService.setEvents(events);
     });
         flag.firstTimeEvents = false;
@@ -30,6 +33,11 @@ angular.module("sampleApp")
     }, function (newVal, oldVal) {
   $scope.searchFieldValGlobal = newVal;
  });
+
+
+    $scope.filterByDate = function(){
+      $scope.imagePaths = $filter('dateRange')($scope.models.events,$scope.models.startDate,$scope.models.endDate);
+    };
 
  })
 
@@ -63,12 +71,12 @@ angular.module("sampleApp")
 
  })
 .controller("addEventCtrl", function($scope,commonService,$location) {
+    $('.bs-example-modal-lg').modal('show');
  		$scope.models={
  			event:{
  				icon:'css/images/imgNew.svg'
  			}
  		}
-
  		$scope.randomString = function() {
     		charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
    	 		var randomString = '';
@@ -86,9 +94,15 @@ angular.module("sampleApp")
 			
 			return randomString;
 		}	
+    $scope.closeButton = function(){
+       $('.bs-example-modal-lg').modal('hide');
+              $location.path('#/homePage');
+    }
 		$scope.saveEvent = function (){
+        $('.bs-example-modal-lg').modal('hide');
 		  	$scope.genratedIdNew = $scope.randomString();
 			  $scope.models.event.id = $scope.genratedIdNew;
+        $scope.models.event.dateAndTime = $scope.models.event.date +' '+$scope.models.event.time;
          	 jsonData.push($scope.models.event);
           
            safeApply($scope, function() {

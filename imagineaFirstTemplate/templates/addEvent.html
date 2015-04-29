@@ -1,50 +1,67 @@
-<div class="container">
-	<div class="row-fluid">
-		<form class="form-horizontal addEventForm" name="addEventForm">
+<div class="modal bs-example-modal-lg" id="myModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+    	<form class="form-horizontal addEventForm" name="addEventForm">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add New Event</h4>
+      </div>
+      <div class="modal-body">
+       			
 			<fieldset>
-				<legend>Add New Event</legend>
 				<div class="row">
 					<div class="form-group">
-						<label for="eventTitle" class="col-sm-2 control-label">Title :</label>
-						<div class="col-sm-10">
+						<label for="eventTitle" class="col-sm-3 control-label">Title :</label>
+						<div class="col-sm-9">
 							<input id="eventTitle" class="form-control" name="Title" type="text" placeholder="Event Title" ng-model="models.event.title" ng-pattern="/^.{6,}$/" required></input>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="eventVenue" class="col-sm-2 control-label">Venue :</label>
-						<div class="col-sm-10">
+						<label for="eventVenue" class="col-sm-3 control-label">Venue :</label>
+						<div class="col-sm-9">
 							<input id="eventVenue" class="form-control" name="Venue" type="text" placeholder="Event Venue" ng-model="models.event.venue" ng-pattern="/^.{6,}$/" required></input>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="eventDesc" class="col-sm-2 control-label">Description :</label>
-						<div class="col-sm-10">
+						<label for="eventDesc" class="col-sm-3 control-label">Description :</label>
+						<div class="col-sm-9">
 							<textarea id="eventDesc" class="form-control" name="Desc" type="text" placeholder="Event Description" ng-model="models.event.desc"  ng-pattern="/^.{6,}$/" required></textarea>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="eventDateAndTime" class="col-sm-2 control-label">Date And Time :</label>
-						<div class="col-sm-10">
-							<input id="eventDateAndTime" class="form-control" name="DateAndTime" type="text" placeholder="ddth Month year hh:mm pm/am" ng-model="models.event.dateAndTime" ng-pattern="/^.{6,}$/" required></input>
+						<label for="eventDate" class="col-sm-3 control-label">Date :</label>
+						<div class="col-sm-9">
+							<input id="eventDate" class="form-control" name="Date" type="text" placeholder="yyyy/mm/dd" ng-model="models.event.date"required></input>
 						</div>
 					</div>
-					
+					<div class="form-group">
+						<label for="timepicker1" class="col-sm-3 control-label">Time :</label>
+						
+						<div class="col-sm-9 input-group bootstrap-timepicker">
+                    <input id="timepicker1" type="text" class="input-small form-control"  ng-model="models.event.time"required>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                </div>
+					</div>
 				</div>
 			</fieldset>
-			<div class="form-actions align-center">
-				<button ng-disabled="addEventForm.$invalid" class="btn btn-primary" ng-click="saveEvent()">
-						Save Event
-				</button>
-			</div>
-		</form>
-	</div>
+			
+		
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-default" ng-click="closeButton()">Close</button>
+        <button ng-disabled="addEventForm.$invalid" class="btn btn-primary" ng-click="saveEvent()">Save event</button>
+      </div>
+      </form>
+
+    </div>
+  </div>
 </div>
 
 <style type="text/css">
 	.form-horizontal {
-		margin-left: 82px;
-		margin-right: 82px;
-
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 	.align-center{
 		text-align: center;
@@ -55,4 +72,25 @@
 	input.ng-dirty.ng-valid, textarea.ng-dirty.ng-valid{
 		background-color:#9acd32 ;
 	}
+.col-sm-9.input-group.bootstrap-timepicker{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 </style>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$('#eventDate').datepicker({
+		 todayBtn: "linked",
+        orientation: "top auto",
+        startDate: new Date(),
+        format:"yyyy/mm/dd",
+        clearBtn: true,
+        autoclose: true
+	});
+
+	$('#timepicker1').timepicker();
+
+});
+</script>>

@@ -71,3 +71,11 @@
 .containerClass .list li .listViewText b {
     color: #576969;
 }
+.searchBoxContainer{
+    margin : 0 0 2% 3%;
+    float: left !important;
+}
+.searchFields{
+    display: inline-block;
+    width: 100%;
+}

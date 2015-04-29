@@ -17,8 +17,24 @@
 
             </div>
         </div>
+        <div class="searchFields">
+        <div class="searchBoxContainer input-group col-md-3  add-on">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" ng-model="searchByField">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+             </div>
+        </div>
+       <div class="span5 col-md-6" id="sandbox-container"><div class="input-daterange input-group" id="datepicker">
+    <input type="text" class="input-from-date form-control" name="start" placeholder="From Date" ng-model="models.startDate" value="">
+    <span class="input-group-addon">to</span>
+    <input type="text" class="input-to-date form-control" name="end" placeholder="To Date"ng-model="models.endDate" value="">
+</div></div>
+        <div class="col-md-2">
+          <a href="#" class="btn btn-info" ng-click="filterByDate()">Search</a>
+        </div>
+        </div>
         <ul class="list">
-            <li class="imageLiCLass" ng-repeat="paths in imagePaths |  filter:searchFieldValGlobal">
+            <li class="imageLiCLass" ng-repeat="paths in imagePaths |  filter:searchByField">
                 <a class="media" ng-click="navigateToDetails(paths)">
                     <img id="{{paths.id}}" src="{{paths.icon}}" />
                     <span class="listViewText"><b>Title</b>:-<span class="imageTitle"> {{paths.title}}</span>
@@ -41,23 +57,22 @@
     </li>
 
     </ul>
-
-
-
-
 </div>
 </div>
-
-
-
-
 <link rel="stylesheet" href="css/overlay.css" />
 
 
 <link rel="stylesheet" href="css/homePage.css" />
-<style>
-</style>
-
-
-<style>
-</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $('#sandbox-container .input-daterange .input-from-date,#sandbox-container .input-daterange .input-to-date').datepicker({
+         todayBtn: "linked",
+        orientation: "top auto",
+        startDate: new Date(),
+        format:"yyyy/mm/dd",
+        clearBtn: true,
+        autoclose: true
+});
+     
+    });
+</script>>

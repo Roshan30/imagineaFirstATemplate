@@ -65,7 +65,40 @@ angular.module("sampleApp").factory('commonService',function($q, $http){
             	searchData = data;
             }
             }
-        });
+        }).
+
+filter('dateRange', function(){
+
+    return function(input, startDate, endDate) {
+       this.startDateInp = startDate;
+       	this.endDateInp = endDate;
+       	this.result = [];
+       angular.forEach(input, function(obj){
+
+       	var dateAndTime = (obj.dateAndTime).split(" ")[0].replace(/\//g, '');
+       	if(this.startDateInp!=undefined && this.endDateInp!=undefined){
+       			this.startDateInp = startDate.replace(/\//g, '');
+       			this.endDateInp = endDate.replace(/\//g, '');
+       			if(dateAndTime >= this.startDateInp && dateAndTime <= this.endDateInp){
+       				this.result.push(obj);
+       		}
+       	}else if(this.endDateInp==undefined){
+       			this.startDateInp = startDate.replace(/\//g, '');
+       			if(dateAndTime >= this.startDateInp){
+       				this.result.push(obj);
+       			}
+       	}else if(this.startDateInp==undefined){
+       			this.endDateInp = endDate.replace(/\//g, '');
+       			if(dateAndTime <= this.endDateInp){
+       				this.result.push(obj);
+       			}
+       	}
+       	
+
+       });
+       	return this.result;
+    };
+});
 
 
 

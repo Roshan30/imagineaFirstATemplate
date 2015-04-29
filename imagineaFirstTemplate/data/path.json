@@ -9,7 +9,7 @@
             "url":"#homePage"
          },
          {  
-            "class":"fa fa-plus fa-2x",
+            "class":"fa fa-plus fa-2x addEventMenu",
             "url":"#addEvent"
          },
          {  
