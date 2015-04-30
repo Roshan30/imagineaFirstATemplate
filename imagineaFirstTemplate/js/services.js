@@ -32,19 +32,11 @@ angular.module("sampleApp").factory('commonService',function($q, $http){
 
 			return defer.promise;
 		}
-		var factory={}
-		function _getSearchData (){
-			console.log('factory'+searchFieldValGlobal);
-			var defer = $q.defer();
-			defer.resolve(searchFieldValGlobal);
-			return defer.promise;
-		}
-
+	
 	return{
 		getEvents:_getEvents,
 		getPath:_getPath,
 		getePath:_getePath,
-		getSearchData:_getSearchData
 	}
 
 

@@ -28,11 +28,6 @@ angular.module("sampleApp")
  	$scope.navigateToDetails = function (paths) {
  		$location.url('eventDetail/' + paths.id);
  	}
- $scope.$watch( function () {
-        return $window.searchFieldValGlobal; 
-    }, function (newVal, oldVal) {
-  $scope.searchFieldValGlobal = newVal;
- });
 
 
     $scope.filterByDate = function(){
@@ -44,12 +39,7 @@ angular.module("sampleApp")
  .controller("headerCtrl", function($scope, commonService,$commonService) {
  	commonService.getePath().then(function(response){
           $scope.paths = response;
-      });
-      $scope.searchFieldVal={}
-      $scope.updateSearch = function(fieldVal){
-       searchFieldValGlobal = $scope.searchFieldVal.newVal;
-      }
-            
+      });      
  })
 
 .controller("sideMenuCtrl", function($scope, commonService) {
@@ -70,7 +60,7 @@ angular.module("sampleApp")
  	
 
  })
-.controller("addEventCtrl", function($scope,commonService,$location) {
+.controller("addEventCtrl", function($scope,commonService,$commonService,$location) {
     $('.bs-example-modal-lg').modal('show');
  		$scope.models={
  			event:{
@@ -84,13 +74,15 @@ angular.module("sampleApp")
     		var randomPoz = Math.floor(Math.random() * charSet.length);
     		randomString += charSet.substring(randomPoz,randomPoz+1);
    	 		}
-   	 		commonService.getEvents().then(function(response){
- 			    $.each(response, function (key, data) { 	
+   	 		$scope.response = $commonService.getEvents();
+ 			    $.each($scope.response, function (key, data) { 	
  					if (randomString == data.id) {
  						$scope.randomString();
  					}
  			});
-    		});
+    		
+
+
 			
 			return randomString;
 		}	
@@ -104,10 +96,15 @@ angular.module("sampleApp")
 			  $scope.models.event.id = $scope.genratedIdNew;
         $scope.models.event.dateAndTime = $scope.models.event.date +' '+$scope.models.event.time;
          	 jsonData.push($scope.models.event);
+            $commonService.setEvents(jsonData);
+           console.log(jsonData);
+
+
+           safeApply($scope, function(){
+              $location.path('#/homePage');
+           })
+            
           
-           safeApply($scope, function() {
-            $location.path('#/homePage');
-            });
           
  					 }
  });
